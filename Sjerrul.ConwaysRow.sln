@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sjerrul.ConwaysRow", "Sjerrul.ConwaysRow\Sjerrul.ConwaysRow.csproj", "{589247B0-EA33-483F-93BD-C1098E8043F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sjerrul.ConwaysRow.Tests", "Sjerrul.ConwaysRow.Tests\Sjerrul.ConwaysRow.Tests.csproj", "{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{589247B0-EA33-483F-93BD-C1098E8043F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589247B0-EA33-483F-93BD-C1098E8043F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589247B0-EA33-483F-93BD-C1098E8043F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589247B0-EA33-483F-93BD-C1098E8043F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
