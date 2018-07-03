@@ -1,9 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sjerrul.ConwaysRow", "Sjerrul.ConwaysRow\Sjerrul.ConwaysRow.csproj", "{589247B0-EA33-483F-93BD-C1098E8043F2}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC3D56B2-C6EE-48C1-A3CD-637BA41DD861}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sjerrul.ConwaysRow.Tests", "Sjerrul.ConwaysRow.Tests\Sjerrul.ConwaysRow.Tests.csproj", "{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sjerrul.ConwaysRow.Application", "Sjerrul.ConwaysRow.Application\Sjerrul.ConwaysRow.Application.csproj", "{589247B0-EA33-483F-93BD-C1098E8043F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sjerrul.ConwaysRow.Generator.Tests", "Sjerrul.ConwaysRow.Generator.Tests\Sjerrul.ConwaysRow.Generator.Tests.csproj", "{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sjerrul.ConwaysRow.Generator", "Sjerrul.ConwaysRow.Generator\Sjerrul.ConwaysRow.Generator.csproj", "{7992CDF1-0069-4D38-8F33-E2BB000F70CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +28,15 @@ Global
 		{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64CF5377-DEAB-4734-8259-EFC0FF9B73F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7992CDF1-0069-4D38-8F33-E2BB000F70CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7992CDF1-0069-4D38-8F33-E2BB000F70CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7992CDF1-0069-4D38-8F33-E2BB000F70CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7992CDF1-0069-4D38-8F33-E2BB000F70CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9148940A-4D60-4F4B-8F97-D0F8D4488D01}
 	EndGlobalSection
 EndGlobal

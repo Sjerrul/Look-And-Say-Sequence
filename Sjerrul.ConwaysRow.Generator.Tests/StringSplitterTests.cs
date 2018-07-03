@@ -1,18 +1,36 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 
-namespace Sjerrul.ConwaysRow.Tests
+namespace Sjerrul.ConwaysRow.Generator.Tests
 {
     [TestClass]
     public class StringSplitterTests
     {
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Split_EmptyString_Throws()
+        {
+            // Arrange
+            string input = string.Empty;
+
+            // Act
+            StringSplitter.SplitInGroups(input);
+
+            // Assert
+            // ExpectedException
+        }
+
+        [TestMethod]
         public void Test1()
         {
+            // Arrange
             string input = "1";
 
-            IList<string> result = StringSplitter.Split(input);
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+
+            // Assert
             IList<string> expected = new List<string>
             {
                 "1"
@@ -24,9 +42,13 @@ namespace Sjerrul.ConwaysRow.Tests
         [TestMethod]
         public void Test11()
         {
+            // Arrange
             string input = "11";
 
-            IList<string> result = StringSplitter.Split(input);
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+            
+            // Assert
             IList<string> expected = new List<string>
             {
                 "11"
@@ -38,9 +60,13 @@ namespace Sjerrul.ConwaysRow.Tests
         [TestMethod]
         public void Test111()
         {
+            // Arrange
             string input = "111";
 
-            IList<string> result = StringSplitter.Split(input);
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+
+            // Assert
             IList<string> expected = new List<string>
             {
                 "111"
@@ -52,13 +78,96 @@ namespace Sjerrul.ConwaysRow.Tests
         [TestMethod]
         public void Test12()
         {
+            // Arrange
             string input = "12";
 
-            IList<string> result = StringSplitter.Split(input);
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+
+            // Assert
             IList<string> expected = new List<string>
             {
                 "1",
                 "2"
+            };
+
+            Assert.IsTrue(AreArraysEqual(expected, result));
+        }
+
+        [TestMethod]
+        public void Test112()
+        {
+            // Arrange
+            string input = "112";
+
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+
+            // Assert
+            IList<string> expected = new List<string>
+            {
+                "11",
+                "2"
+            };
+
+            Assert.IsTrue(AreArraysEqual(expected, result));
+        }
+
+        [TestMethod]
+        public void Test1122()
+        {
+            // Arrange
+            string input = "1122";
+
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+
+            // Assert
+            IList<string> expected = new List<string>
+            {
+                "11",
+                "22"
+            };
+
+            Assert.IsTrue(AreArraysEqual(expected, result));
+        }
+
+        [TestMethod]
+        public void Test112233()
+        {
+            // Arrange
+            string input = "112233";
+
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+
+            // Assert
+            IList<string> expected = new List<string>
+            {
+                "11",
+                "22",
+                "33"
+            };
+
+            Assert.IsTrue(AreArraysEqual(expected, result));
+        }
+
+        [TestMethod]
+        public void Test11223311()
+        {
+            // Arrange
+            string input = "11223311";
+
+            // Act
+            IList<string> result = StringSplitter.SplitInGroups(input);
+
+            // Assert
+            IList<string> expected = new List<string>
+            {
+                "11",
+                "22",
+                "33",
+                "11"
             };
 
             Assert.IsTrue(AreArraysEqual(expected, result));
@@ -82,68 +191,5 @@ namespace Sjerrul.ConwaysRow.Tests
             return true;
         }
 
-        [TestMethod]
-        public void Test112()
-        {
-            string input = "112";
-
-            IList<string> result = StringSplitter.Split(input);
-            IList<string> expected = new List<string>
-            {
-                "11",
-                "2"
-            };
-
-            Assert.IsTrue(AreArraysEqual(expected, result));
-        }
-
-        [TestMethod]
-        public void Test1122()
-        {
-            string input = "1122";
-
-            IList<string> result = StringSplitter.Split(input);
-            IList<string> expected = new List<string>
-            {
-                "11",
-                "22"
-            };
-
-            Assert.IsTrue(AreArraysEqual(expected, result));
-        }
-
-        [TestMethod]
-        public void Test112233()
-        {
-            string input = "112233";
-
-            IList<string> result = StringSplitter.Split(input);
-            IList<string> expected = new List<string>
-            {
-                "11",
-                "22",
-                "33"
-            };
-
-            Assert.IsTrue(AreArraysEqual(expected, result));
-        }
-
-        [TestMethod]
-        public void Test11223311()
-        {
-            string input = "11223311";
-
-            IList<string> result = StringSplitter.Split(input);
-            IList<string> expected = new List<string>
-            {
-                "11",
-                "22",
-                "33",
-                "11"
-            };
-
-            Assert.IsTrue(AreArraysEqual(expected, result));
-        }
-        
     }
 }
